@@ -1,0 +1,38 @@
+body {
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 900px;
+    margin: 50px auto;
+}
+h1 {
+    width: 640px;
+    text-align: center;
+    font-size: 5em;
+    margin: 0;
+    margin-left: 140px;
+    padding: 0;
+    letter-spacing: 24px;
+    font-weight: 900;
+}
+h3 {
+    font-style: italic;
+    width: 640px;
+    text-align: center;
+    margin: 0;
+    margin-left: 130px;
+    padding: 0;
+}
+p {
+    /*font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;*/
+    font-size: 1.2em;
+    width: 900px;
+    float: left;
+    opacity: 0.8;
+    margin: 50px 20px;
+    text-align: left;
+    letter-spacing: 0.25px;
+    line-height: 30px;
+}

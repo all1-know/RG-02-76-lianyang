@@ -1,0 +1,138 @@
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:400,700';
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #4b98a0;
+    background: radial-gradient(ellipse at top, #e0a800 80%, #4b0082 30%) fixed;
+}
+body {
+    font-family: 'Open Sans', arial;
+    font-size: 0.8em;
+    padding: 20px 0px;
+}
+.row {
+     perspective: 80em;
+     width: 960px;
+     margin: 0 auto;
+ }
+.mainContent {
+    perspective: 80em;
+    width: 960px;
+    margin: 0 auto;
+}
+.box {
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 280px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0px 0px 50px rgba(75, 152, 160, 0.35);
+    opacity: 0;
+}
+.box:nth-child(1) {
+    animation-delay: 0s !important;
+    z-index: 6;
+}
+.box:nth-child(1) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?1");
+}
+.box:nth-child(2) {
+    animation-delay: 0.16s !important;
+    z-index: 5;
+}
+.box:nth-child(2) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?2");
+}
+.box:nth-child(3) {
+    animation-delay: 0.32s !important;
+    z-index: 4;
+}
+.box:nth-child(3) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?3");
+}
+.box:nth-child(4) {
+    animation-delay: 0.48s !important;
+    z-index: 3;
+}
+.box:nth-child(4) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?4");
+}
+.box:nth-child(5) {
+    animation-delay: 0.64s !important;
+    z-index: 2;
+}
+.box:nth-child(5) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?5");
+}
+.box:nth-child(6) {
+    animation-delay: 0.8s !important;
+    z-index: 1;
+}
+.box:nth-child(6) .box-banner {
+    background-image: url("http://lorempixel.com/300/300/nature/?6");
+}
+.box h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.box a {
+    margin: 0;
+}
+.box .box-banner {
+    background: #ccc;
+    height: 80px;
+    margin: 0px -15px;
+    margin-bottom: 6px;
+    background-position: center center;
+}
+.box.no-text .box-banner {
+    height: 129px;
+}
+.loaded .box {
+    opacity: 1;
+    animation: animateBoxesFromTopToBottom 1.2s backwards;
+}
+@keyframes animateBoxesFromTopToBottom {
+    0% {
+        transform: rotateX(90deg) translateY(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+}
+.replayButton {
+    position: absolute;
+    display: block;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    padding: 0px 10px 4px 10px;
+    color: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+}
+.loaded .replayButton {
+    transform: none;
+    animation: showReplayButton 1.2s backwards;
+    animation-delay: 2.96s;
+    transform: translateZ(1px);
+}
+@keyframes showReplayButton {
+    0% {
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
